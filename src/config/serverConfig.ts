@@ -8,3 +8,7 @@ dotenv.config({
 export const serverConfig = {
     port : process.env.APP_SERVER_PORT
 }
+
+export const dbConfig = {
+    host:process.env.APP_HOST_DATABASE
+}

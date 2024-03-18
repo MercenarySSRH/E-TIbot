@@ -1,4 +1,4 @@
-import { ServerManagement } from "../core/serverManagement"
+import { ServerManagement } from "../core/serverInitializer"
 
 
 export interface SetupProtocol{

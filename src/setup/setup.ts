@@ -1,12 +1,12 @@
 import express from 'express'
 import { SetupProtocol } from '../interfaces/ServerProtocols'
-import { ServerManagement } from '../core/serverManagement'
+import { ServerInitializer } from '../core/serverInitializer'
 
 
 export class Setup implements SetupProtocol{
-    private server:ServerManagement
+    private server:ServerInitializer
     constructor(){
-        this.server = new ServerManagement()
+        this.server = new ServerInitializer()
     }
     boot(){    
        this.server.startServer()

@@ -1,12 +1,8 @@
 import {Sequelize} from'sequelize'
+import { dbConfig } from './serverConfig'
 
-export class DbManager {
 
-     createDatabase():Sequelize{
-        const database = new Sequelize('ssrh','root','',{
-            dialect:'mysql',
-            host:'localhost'
-        })
-        return database
-    }
-}
+export const database = new Sequelize('ssrh','root','',{
+    dialect:'mysql',
+    host:dbConfig.host
+})
