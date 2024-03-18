@@ -7,6 +7,7 @@ export class ServerManagement implements ServerProtocol {
     constructor(){
         this.app = express()
     }
+
     startServer(): void {
         this.initialize()
     }
