@@ -15,6 +15,8 @@ export class ServerInitializer implements ServerProtocol {
     }
 
     startServer(): void {
+        this.app.use(express.json())
+   
         this.initialize()
     }
 

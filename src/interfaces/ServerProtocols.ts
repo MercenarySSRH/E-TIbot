@@ -1,6 +1,5 @@
 import { ServerInitializer} from "../core/serverInitializer"
-
-
+import { Router,RequestHandler } from "express"
 export interface SetupProtocol{
     boot():void
 }
@@ -10,9 +9,10 @@ export interface ServerProtocol{
     initialize():void
 }
 
-export interface ServerRouterProtocol{
-    get():void
-    post():void
-    put():void
-    patch():void
+export abstract class ServerRouterProtocol{
+      abstract baseUrl:string
+     abstract get(url:string,...args:RequestHandler[]):void
+     abstract post(url:string,...args:RequestHandler[]):void
+     abstract put(url:string,...args:RequestHandler[]):void
+     abstract patch(url:string,...args:RequestHandler[]):void
 }
