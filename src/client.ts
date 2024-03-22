@@ -1,4 +1,5 @@
-import { Setup } from "./setup/setup";
+import { createSetup } from "./setup/Setup";
 
-const app = new Setup()
-app.boot()
+const app = createSetup()
+
+app.initialize()
